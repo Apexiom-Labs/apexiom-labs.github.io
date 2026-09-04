@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apexiom Labs | Distributed AI Systems &amp; Hardware Architecture</title>
+  <title>Apexiom Labs | Continuous Dynamical Foundation Models</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -42,17 +42,16 @@
     }
 
     .wrapper {
-      max-width: 980px;
+      max-width: 1024px;
       width: 100%;
       margin: 0 auto;
     }
 
-    /* Top Nav / Status */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 3.5rem;
+      padding-bottom: 3rem;
       border-bottom: 1px solid var(--border);
     }
 
@@ -93,23 +92,22 @@
       50% { opacity: 1; transform: scale(1.2); }
     }
 
-    /* Hero Section */
     .hero {
-      padding: 4.5rem 0 3.5rem;
+      padding: 4.5rem 0 3rem;
     }
 
     .meta-tag {
       font-family: var(--font-mono);
       font-size: 0.8rem;
       font-weight: 500;
-      color: var(--text-muted);
+      color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.12em;
       margin-bottom: 1.25rem;
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
       font-weight: 700;
       letter-spacing: -0.04em;
       line-height: 1.15;
@@ -120,11 +118,10 @@
     .hero-desc {
       font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 680px;
+      max-width: 780px;
       line-height: 1.7;
     }
 
-    /* Technical Pillars Grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -154,19 +151,18 @@
     }
 
     .card h2 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: #fff;
       margin-bottom: 0.6rem;
     }
 
     .card p {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
       line-height: 1.6;
     }
 
-    /* System Telemetry Bar */
     .telemetry-strip {
       display: flex;
       flex-wrap: wrap;
@@ -186,11 +182,10 @@
       font-weight: 500;
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid var(--border);
       padding-top: 2rem;
-      margin-top: 5rem;
+      margin-top: 4rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -218,45 +213,54 @@
       <div class="brand">APEXIOM LABS</div>
       <div class="status-badge">
         <span class="pulse"></span>
-        <span>LAB_SYS // ACTIVE</span>
+        <span>ENGINE // ACTIVE_DEV</span>
       </div>
     </header>
 
     <main class="hero">
-      <div class="meta-tag">// ACCELERATED COMPUTING &amp; RUNTIME RESEARCH</div>
-      <h1>High-throughput systems for frontier machine intelligence.</h1>
+      <div class="meta-tag">// ARCHITECTURE BRIEF: APEXIOM CORE-1</div>
+      <h1>Physics-grounded foundation models for continuous dynamical systems.</h1>
       <p class="hero-desc">
-        Apexiom Labs designs hardware-aligned execution runtimes, low-latency GPU kernel primitives, and distributed parallelization topologies engineered for large-scale model inference.
+        Apexiom Labs engineers spatio-temporal representation priors and bare-metal runtime pipelines. Pre-trained on continuous physical conservation laws, our models transfer foundational dynamical representations directly across non-stationary wave environments and discrete state-space topologies.
       </p>
 
       <div class="grid">
         <div class="card">
           <div class="card-id">SYS_01 // ARCHITECTURE</div>
-          <h2>Kernel-Level Acceleration</h2>
-          <p>Writing bare-metal tensor operators, memory-coalesced attention primitives, and custom compute kernels optimized for modern deep learning silicon.</p>
+          <h2>Joint-Embedding Dynamics</h2>
+          <p>Deploying TS-JEPA architectures and continuous tokenizers to model phase-space momentum, wave dispersion, and spectral trajectories without non-essential generative overhead.</p>
         </div>
+
         <div class="card">
-          <div class="card-id">SYS_02 // PARALLELISM</div>
-          <h2>Distributed Interconnect Fabrics</h2>
-          <p>Optimizing multi-node pipeline and tensor partitioning across high-bandwidth GPU clusters to maximize arithmetic intensity and minimize collective stalls.</p>
+          <div class="card-id">SYS_02 // CROSS-DOMAIN TRANSFER</div>
+          <h2>Dual Evaluation Regimes</h2>
+          <p>Transferring pre-trained physical priors across two proprietary domains: continuous non-stationary wave fields (AoA tracking, spectral anomalies) and discrete topological state transitions.</p>
         </div>
+
         <div class="card">
-          <div class="card-id">SYS_03 // INFERENCE</div>
-          <h2>Low-Latency Engine Runtimes</h2>
-          <p>Engineering specialized speculative decoding, dynamic batching pipelines, and zero-copy memory managers for deterministic sub-millisecond execution.</p>
+          <div class="card-id">SYS_03 // DATA PIPELINE</div>
+          <h2>Zero-Copy Ingestion</h2>
+          <p>Custom asynchronous DMA ring buffers and memory-coalesced CUDA routines streaming 60+ MSPS raw time-series tensors directly into unified GPU memory to eliminate bus stalls.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-id">SYS_04 // RUNTIME ACCELERATION</div>
+          <h2>Edge-to-Cluster Execution</h2>
+          <p>Quantized TensorRT execution for low-power edge silicon alongside distributed FP8/FP4 cluster pre-training across high-bandwidth Hopper and Blackwell interconnects.</p>
         </div>
       </div>
 
       <div class="telemetry-strip">
-        <span>DOMAIN: <strong>APEXIOM-LABS.COM</strong></span>
-        <span>LOCATION: <strong>NEW JERSEY, USA</strong></span>
-        <span>STATUS: <strong>R&amp;D DEPLOYMENT</strong></span>
+        <span>RUNTIME: <strong>APEXIOM CORE-1</strong></span>
+        <span>DOMAIN: <strong>CONTINUOUS TENSORS</strong></span>
+        <span>STREAM RATE: <strong>&gt; 60 MSPS</strong></span>
+        <span>DEPLOYMENT: <strong>R&amp;D PIPELINE</strong></span>
       </div>
     </main>
 
     <footer>
       <div>&copy; 2026 apexiom-labs LLC. All rights reserved.</div>
-      <div>Contact: <a href="mailto:daniel@apexiom-labs.com">daniel@apexiom-labs.com</a></div>
+      <div>Technical Inquiries: <a href="mailto:daniel@apexiom-labs.com">daniel@apexiom-labs.com</a></div>
     </footer>
   </div>
 </body>
