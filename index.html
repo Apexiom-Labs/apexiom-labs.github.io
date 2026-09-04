@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apexiom Labs | Distributed AI Systems &amp; Hardware Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07080a;
+      --surface: #0e1117;
+      --surface-hover: #131720;
+      --border: #1a202c;
+      --border-bright: #2d3748;
+      --text: #f0f4f8;
+      --text-muted: #8892b0;
+      --accent: #00e599;
+      --accent-dim: rgba(0, 229, 153, 0.12);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(ellipse 60% 40% at 50% -10%, rgba(0, 229, 153, 0.08), transparent),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 980px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Top Nav / Status */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(0, 229, 153, 0.25);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .pulse {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse-glow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 4.5rem 0 3.5rem;
+    }
+
+    .meta-tag {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      line-height: 1.7;
+    }
+
+    /* Technical Pillars Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--border-bright);
+      background: var(--surface-hover);
+    }
+
+    .card-id {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* System Telemetry Bar */
+    .telemetry-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3.5rem;
+      padding: 1.25rem 1.75rem;
+      background: rgba(14, 17, 23, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .telemetry-strip span strong {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #55627a;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="brand">APEXIOM LABS</div>
+      <div class="status-badge">
+        <span class="pulse"></span>
+        <span>LAB_SYS // ACTIVE</span>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="meta-tag">// ACCELERATED COMPUTING &amp; RUNTIME RESEARCH</div>
+      <h1>High-throughput systems for frontier machine intelligence.</h1>
+      <p class="hero-desc">
+        Apexiom Labs designs hardware-aligned execution runtimes, low-latency GPU kernel primitives, and distributed parallelization topologies engineered for large-scale model inference.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-id">SYS_01 // ARCHITECTURE</div>
+          <h2>Kernel-Level Acceleration</h2>
+          <p>Writing bare-metal tensor operators, memory-coalesced attention primitives, and custom compute kernels optimized for modern deep learning silicon.</p>
+        </div>
+        <div class="card">
+          <div class="card-id">SYS_02 // PARALLELISM</div>
+          <h2>Distributed Interconnect Fabrics</h2>
+          <p>Optimizing multi-node pipeline and tensor partitioning across high-bandwidth GPU clusters to maximize arithmetic intensity and minimize collective stalls.</p>
+        </div>
+        <div class="card">
+          <div class="card-id">SYS_03 // INFERENCE</div>
+          <h2>Low-Latency Engine Runtimes</h2>
+          <p>Engineering specialized speculative decoding, dynamic batching pipelines, and zero-copy memory managers for deterministic sub-millisecond execution.</p>
+        </div>
+      </div>
+
+      <div class="telemetry-strip">
+        <span>DOMAIN: <strong>APEXIOM-LABS.COM</strong></span>
+        <span>LOCATION: <strong>NEW JERSEY, USA</strong></span>
+        <span>STATUS: <strong>R&amp;D DEPLOYMENT</strong></span>
+      </div>
+    </main>
+
+    <footer>
+      <div>&copy; 2026 apexiom-labs LLC. All rights reserved.</div>
+      <div>Contact: <a href="mailto:daniel@apexiom-labs.com">daniel@apexiom-labs.com</a></div>
+    </footer>
+  </div>
+</body>
+</html>
