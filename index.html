@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Primary Meta Tags -->
+  <title>Apexiom Labs | Physics-Grounded Foundation Models</title>
+  <meta name="title" content="Apexiom Labs | Physics-Grounded Foundation Models">
+  <meta name="description" content="Apexiom Labs develops physics-grounded foundation models, accelerated computing architectures, and continuous dynamical systems simulation software.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apexiomlabs.com/">
+  <meta property="og:site_name" content="Apexiom Labs">
+  <meta property="og:title" content="Apexiom Labs | Physics-Grounded Foundation Models">
+  <meta property="og:description" content="Apexiom Labs develops physics-grounded foundation models, accelerated computing architectures, and continuous dynamical systems simulation software.">
+  <!-- <meta property="og:image" content="https://apexiomlabs.com/og-preview.png"> -->
+  
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://apexiomlabs.com/">
+  <meta property="twitter:title" content="Apexiom Labs | Physics-Grounded Foundation Models">
+  <meta property="twitter:description" content="Apexiom Labs develops physics-grounded foundation models, accelerated computing architectures, and continuous dynamical systems simulation software.">
+  
+  <!-- Structured Schema Data for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Apexiom Labs LLC",
+    "url": "https://apexiomlabs.com",
+    "description": "Research and development of accelerated computing foundation models, mathematical simulation algorithms, and continuous dynamical systems software."
+  }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apexiom Labs | Continuous Dynamical Foundation Models</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07080a;
+      --surface: #0e1117;
+      --surface-hover: #131720;
+      --border: #1a202c;
+      --border-bright: #2d3748;
+      --text: #f0f4f8;
+      --text-muted: #8892b0;
+      --accent: #00e599;
+      --accent-dim: rgba(0, 229, 153, 0.12);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(ellipse 60% 40% at 50% -10%, rgba(0, 229, 153, 0.08), transparent),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .wrapper {
+      max-width: 1024px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(0, 229, 153, 0.25);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+    }
+
+    .pulse {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse-glow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    .hero {
+      padding: 4.5rem 0 3rem;
+    }
+
+    .meta-tag {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--border-bright);
+      background: var(--surface-hover);
+    }
+
+    .card-id {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .telemetry-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3.5rem;
+      padding: 1.25rem 1.75rem;
+      background: rgba(14, 17, 23, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .telemetry-strip span strong {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #55627a;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="brand">APEXIOM LABS</div>
+      <div class="status-badge">
+        <span class="pulse"></span>
+        <span>ENGINE // ACTIVE_DEV</span>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="meta-tag">// ARCHITECTURE BRIEF: APEXIOM CORE-1</div>
+      <h1>Physics-grounded foundation models for continuous dynamical systems.</h1>
+      <p class="hero-desc">
+        Apexiom Labs engineers spatio-temporal representation priors and bare-metal runtime pipelines. Pre-trained on continuous physical conservation laws, our models transfer foundational dynamical representations directly across non-stationary wave environments and discrete state-space topologies.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-id">SYS_01 // ARCHITECTURE</div>
+          <h2>Joint-Embedding Dynamics</h2>
+          <p>Deploying JEPA architectures and continuous tokenizers to model phase-space momentum, wave dispersion, and spatial trajectories without non-essential generative overhead.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-id">SYS_02 // CROSS-DOMAIN TRANSFER</div>
+          <h2>Dual Evaluation Regimes</h2>
+          <p>Transferring pre-trained physical priors across two proprietary domains: continuous non-stationary wave fields and discrete topological state transitions.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-id">SYS_03 // DATA PIPELINE</div>
+          <h2>Zero-Copy Ingestion</h2>
+          <p>Custom asynchronous DMA ring buffers and memory-coalesced CUDA routines streaming 60+ MSPS raw time-series tensors directly into unified GPU memory to eliminate bus stalls.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-id">SYS_04 // RUNTIME ACCELERATION</div>
+          <h2>Bare-Metal Graph Execution</h2>
+          <p>Native Rust runtime acceleration leveraging replayable CUDA Graphs and custom stream kernels—eliminating host-side launch overhead for deterministic, sub-millisecond inference across Ada Lovelace, Blackwell, Hopper architectures.</p>
+        </div>
+      </div>
+
+      <div class="telemetry-strip">
+        <span>RUNTIME: <strong>APEXIOM CORE-1</strong></span>
+        <span>DOMAIN: <strong>CONTINUOUS TENSORS</strong></span>
+        <span>STREAM RATE: <strong>&gt; 60 MSPS</strong></span>
+        <span>DEPLOYMENT: <strong>R&amp;D PIPELINE</strong></span>
+      </div>
+    </main>
+
+    <footer>
+      <div>&copy; 2026 apexiom-labs LLC. All rights reserved.</div>
+      <div>Technical Inquiries: <a href="mailto:daniel@apexiom-labs.com">daniel@apexiom-labs.com</a></div>
+    </footer>
+  </div>
+</body>
+</html>
